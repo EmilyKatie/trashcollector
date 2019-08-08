@@ -22,7 +22,12 @@ namespace trashcollector.Models
     {
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
+
         {
+            DbSet<Customer> customers;
+
+            //DbSet<Employee> employees;
+
         }
 
         public static ApplicationDbContext Create()
